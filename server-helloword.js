@@ -1,19 +1,17 @@
 var server=require('http');
 var myserver =server.createServer();
 myserver.on('request',function(request,response){
-  var rurl=request.url;
-  var text;
-  console.log('请求路径'+request.url);
-  if(rurl=='/'){
-    text="root";
-  }else if(rurl=='/index'){
-    text="index"
-  }else if (rurl=='/home') {
-    text='home'
-  }
+  var arr=[
+    {name:'Tom',
+    age:10},
+    {name:'Jerry',
+    age:9},
+    {name:'Dmy',
+    age:13}
+  ];
 
-  //response.write('hello word');
-  response.end(text);
+
+  response.end(JSON.stringify(arr));
 });
 
 myserver.listen(3000,function(){
