@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+ <script src="node_modules/art-template/lib/template-web.js" charset="utf-8"></script>
+
+ <script type="text/template" id="tpl">
+
+
+
+
+ hello{{name}}
+ </script>
+
+ <script type="text/javascript">
+  var ret=template('tpl',{name:'Node'});
+  console.log(ret);//数据会被tpl模版渲染
+ </script>
+  </body>
+</html>
