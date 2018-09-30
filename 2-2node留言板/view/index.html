@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+
+<hr>
+ <button type="button" class="btn btn-success">添加</button>
+<hr>
+    <ul class="list-group">
+      {{each dataList}}
+    <li class="list-group-item">{{$value.name}}.Say:{{$value.message}}
+      <span class="pull-right">{{$value.date}}</span>
+    </li>
+      {{/each}}
+  </ul>
+  </div>
+  </body>
+</html>
