@@ -30,7 +30,9 @@ var server=http.createServer(function(request,response){
    if(requestUrl=='/addMeg'){
 	   var addData=urlObj.query;
      addData.date='2018-9-30';
-     messageData.push(addData);
+     //messageData.push(addData);
+     //在数组头部添加
+     messageData.unshift(addData);
      //重定向
      response.statusCode=302;
      response.setHeader('Location','/');
