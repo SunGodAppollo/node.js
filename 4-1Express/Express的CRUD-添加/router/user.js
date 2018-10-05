@@ -2,8 +2,10 @@
 
 
 //引包
-const fs=require('fs');
 const express=require('express');
+
+//挂载Express的路由router
+const router=express.Router();
 
 //加载模型
 const userModel=require('../model/userModel');
@@ -11,8 +13,7 @@ const userModel=require('../model/userModel');
 //设置文件数据库路径
 const dbPath='./db.json';
 
-//挂载Express的路由router
-const router=express.Router();
+
 
 
 //配置请求
@@ -38,7 +39,6 @@ res.render('useradd.html');
 //添加用户操作
 router.post('/user/add',function(req,res){
 var user=req.body;
-console.log(user);
 userModel.addUser(user,function(error){
   if(error){
     return res.status(500).send('Server Error!!');
