@@ -51,9 +51,30 @@ userModel.addUser(user,function(error){
 
 //更新修改页面
 router.get('/user/update',function(req,res){
-updateId=  
-res.render('userUpdate.html');
+var id=req.query.id;
+userModel.findUserById(id,function(error,data){
+  if (error) {
+      return res.status(500).send('Server Error!!');
+  }else {
+    res.render('userUpdate.html',{user:data});
+  }
 });
+
+});
+
+//更新数据
+router.post('/user/update',function(req,res){
+  var user=req.body;
+  userModel.updateUser(user,function(error){
+    if(error){
+        return res.status(500).send('Server Error!!');
+    }else {
+      res.redirect('/user');
+    }
+  });
+});
+
+
 
 //导出router
 module.exports=router;

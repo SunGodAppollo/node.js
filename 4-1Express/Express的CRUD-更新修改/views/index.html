@@ -21,6 +21,7 @@
               <th>Name</th>
               <th>Age</th>
               <th>Like</th>
+              <th>Other</th>
             </tr>
           </thead>
           <tbody>
@@ -30,6 +31,11 @@
               <td>{{$value.name}}</td>
               <td>{{$value.age}}</td>
               <td>{{$value.like}}</td>
+              <td>
+                <a class="btn btn-info" href="/user/update?id={{$value.id}}">修改</a>
+                <a class="btn btn-danger" href="/user/update">删除</a>
+              </td>
+
             </tr>
             {{/each}}
           </tbody>

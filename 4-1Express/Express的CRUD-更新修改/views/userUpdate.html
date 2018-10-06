@@ -9,17 +9,18 @@
 
 <div class="container">
     <form action="" method="post">
+      <input type="hidden" name="id" value="{{user.id}}">
       <div class="form-group">
         <label for="exampleInputEmail1">Name</label>
-        <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Name">
+        <input type="text" class="form-control" name="name" value="{{user.name}}" id="exampleInputEmail1" placeholder="Name">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Age</label>
-        <input type="text" class="form-control" name="age" id="exampleInputPassword1" placeholder="Age">
+        <input type="text" class="form-control" name="age" value="{{user.age}}"  id="exampleInputPassword1" placeholder="Age">
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Like</label>
-        <input type="text" class="form-control" name="like" id="exampleInputPassword1" placeholder="Like">
+        <input type="text" class="form-control" name="like" value="{{user.like}}" id="exampleInputPassword1" placeholder="Like">
       </div>
 
 
