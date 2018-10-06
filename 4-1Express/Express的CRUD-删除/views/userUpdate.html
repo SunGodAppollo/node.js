@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title></title>
+  </head>
+  <body>
+
+<div class="container">
+    <form action="" method="post">
+      <input type="hidden" name="id" value="{{user.id}}">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name</label>
+        <input type="text" class="form-control" name="name" value="{{user.name}}" id="exampleInputEmail1" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Age</label>
+        <input type="text" class="form-control" name="age" value="{{user.age}}"  id="exampleInputPassword1" placeholder="Age">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Like</label>
+        <input type="text" class="form-control" name="like" value="{{user.like}}" id="exampleInputPassword1" placeholder="Like">
+      </div>
+
+
+      <button type="submit" class="btn btn-default">Add</button>
+    </form>
+</div>
+  </body>
+</html>

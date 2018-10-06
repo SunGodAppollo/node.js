@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <hr>
+      <div class="">
+        <a class="btn btn-success" href="/user/add">添加</a>
+      </div>
+      <hr>
+
+      <div class="bs-example" data-example-id="simple-table">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Like</th>
+              <th>Other</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{each user}}
+            <tr>
+              <th scope="row">{{$value.id}}</th>
+              <td>{{$value.name}}</td>
+              <td>{{$value.age}}</td>
+              <td>{{$value.like}}</td>
+              <td>
+                <a class="btn btn-info" href="/user/update?id={{$value.id}}">修改</a>
+                <a class="btn btn-danger" href="/user/Delete?id={{$value.id}}">删除</a>
+              </td>
+
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>
