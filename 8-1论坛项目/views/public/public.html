@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    {{block 'style'}}{{/block}}
+    <title></title>
+  </head>
+  <body>
+    {{include './header.html'}}
+
+    {{block 'content'}}
+    <h1>111</h1>
+    {{/block}}
+
+<!-- foot -->
+<script src="/node_modules/jquery/dist/jquery.min.js" charset="utf-8"></script>
+<script src="/node_modules/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+{{block 'script'}}{{/block}}
+  </body>
+</html>
